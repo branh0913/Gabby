@@ -1,0 +1,14 @@
+---
+run_info:
+  repo_location: /Users/brandonharrell/repos/puppet-mongo
+  test_classes:
+    - "mongo::mongodb"
+    - "mongo::user"
+  dependencies:
+    - mod_name: puppetlabs/mongodb
+      version: 0.17.0
+    - mod_name: puppetlabs/stdlib
+      version:  4.12.0
+
+
+

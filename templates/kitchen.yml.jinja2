@@ -1,0 +1,26 @@
+---
+driver:
+  name: docker
+  binary: /usr/bin/docker
+
+
+provisioner:
+  name: puppet_apply
+  manifests_path: manifests
+  modules_path: modules
+  require_puppet_collections: true
+  puppet_yum_collections_repo: "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm"
+
+driver_config:
+  run_command: /sbin/init
+  privileged: true
+
+platforms:
+  - name: centos-7.2
+
+
+
+suites:
+  - name:
+    provisioner:
+      manifest: test.pp
