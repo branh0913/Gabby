@@ -10,7 +10,7 @@ def load_run_config(run_config=None):
         try:
             run_yaml = yaml.load(config_run)
             return run_yaml
-        except (yaml.YAMLError, FileExistsError, FileNotFoundError) as e:
+        except (yaml.YAMLError, FileNotFoundError) as e:
             print(e)
 
 
@@ -26,8 +26,10 @@ def load_templates(tmpl_file):
         print(templ_ex)
 
 
-def render_templates(templ, data):
+def set_templates(templ):
     pass
+
+
 
 
 
