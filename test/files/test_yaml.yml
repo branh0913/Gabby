@@ -1,2 +1,14 @@
 ---
-key: some_value
+run_info:
+  module_location: /Users/brandonharrell/repos/puppet-test
+  project_files:
+    manifest:
+      classes:
+       - "mongo::mongodb"
+       - "mongo::user"
+    puppetfile:
+     dependencies:
+      - mod_name: puppetlabs/mongodb
+        version: 0.17.0
+      - mod_name: puppetlabs/stdlib
+        version:  4.12.0

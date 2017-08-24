@@ -1,5 +1,4 @@
-{%- for classes in run_data['class_data'] -%}
-
-include {{classes}}
-
-{% endfor %}
+{%- set class_list = classes -%}
+{% for class in class_list %}
+include {{class}}
+{%- endfor -%}
